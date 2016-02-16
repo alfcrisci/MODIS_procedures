@@ -2,7 +2,7 @@
 
 These procedure use  [MODIS Reprojection Tool](https://lpdaac.usgs.gov/tools/modis_reprojection_tool).
 
-Instructions are available [MODIS Reprojection Tool Manual] (https://lpdaac.usgs.gov/sites/default/files/public/mrt41_usermanual_032811.pdf).
+Instructions are available in [MODIS Reprojection Tool Manual] (https://lpdaac.usgs.gov/sites/default/files/public/mrt41_usermanual_032811.pdf).
 
 
 The core for download is getHDF function of 
