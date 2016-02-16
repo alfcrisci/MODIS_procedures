@@ -10,7 +10,7 @@ These procedure use  [MODIS R package](https://r-forge.r-project.org/projects/mo
 
 Customized function are taken from [Thomas Hengl's code in R-GIS](http://r-gis.net/?q=ModisDownload).
 
-Function are available at [rts: Raster Time Series Analysis](https://cran.r-project.org/web/packages/rts/index.html).
+Functions are available also at [rts: Raster Time Series Analysis](https://cran.r-project.org/web/packages/rts/index.html).
 
 
 Enjoy after set up MRT_HOME, MRT_DATA_HOME in environmental variables modifying ~./bashrc file in own linux account.
