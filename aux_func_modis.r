@@ -5,22 +5,25 @@ mosaicHDF=function(hdfNames,filename,MRTpath='/home/salute/MRT/bin',bands_subset
             if (missing(delete)) delete <- FALSE
             
             mosaicname = file(paste(MRTpath, "/TmpMosaic.prm", sep=""), open="wt")
-            write(paste(hdfNames[1], sep=""), mosaicname)
-            for (j in 2:length(hdfNames)) write(paste(hdfNames[j], sep=""),mosaicname,append=T)
+            
+            write(paste(getwd(), '/',hdfNames[1], sep=""), mosaicname)
+            for (j in 2:length(hdfNames)) write(paste(getwd(), '/',hdfNames[j], sep=""),mosaicname,append=T)
             close(mosaicname)
             # generate mosaic:
+
             
             if (bands_subset != '') {
-              e <- system(paste(MRTpath, '/mrtmosaic -i ', MRTpath, '/TmpMosaic.prm -s "',bands_subset,'" -o ',getwd(), '/',filename, sep=""))
+              e <- system(paste(MRTpath, '/mrtmosaic -i ', MRTpath, '/TmpMosaic.prm -s "',bands_subset,'" -o ', filename, sep=""))
               if (e != 0) warning ("Mosaic failed! 'bands_subset' may has incorrect structure!")
             } else {
-              e <- system(paste(MRTpath, '/mrtmosaic -i ', MRTpath, '/TmpMosaic.prm -o ',getwd(), '/',filename, sep=""))
+              e <- system(paste(MRTpath, '/mrtmosaic -i ', MRTpath, '/TmpMosaic.prm -o ',filename, sep=""))
               if (e != 0) warning ("Mosaic failed!")
             }
             if (delete & e == 0) for (ModisName in hdfNames) unlink(paste(getwd(), '/', ModisName, sep=""))
             if (e == 0) return (TRUE)
             else return (FALSE)
           }
+
 
 
 reprojectHDF=function(hdfName,filename,MRTpath="/home/salute/MRT/bin",UL="",LR="",resample_type='NEAREST_NEIGHBOR',proj_type='UTM',
