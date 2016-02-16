@@ -33,6 +33,8 @@ files_tif=gsub(".hdf",".tif",files)
 
 res_MODIS_MOD11A2=list()
 
+# to have create before in user root.
+
 setwd("/home/salute/modis/modis_current/lst")
 
 for ( i in 1:length(list_files)) {
