@@ -5,8 +5,7 @@ These procedure use  [MODIS Reprojection Tool](https://lpdaac.usgs.gov/tools/mod
 Instructions are available in [MODIS Reprojection Tool Manual] (https://lpdaac.usgs.gov/sites/default/files/public/mrt41_usermanual_032811.pdf).
 
 
-The core for download is getHDF function of 
-These procedure use  [MODIS R package](https://r-forge.r-project.org/projects/modis/).
+The core for download is getHDF function from  [MODIS R package](https://r-forge.r-project.org/projects/modis/).
 
 Customized function are taken from [Thomas Hengl's code in R-GIS](http://r-gis.net/?q=ModisDownload).
 
