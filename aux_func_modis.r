@@ -6,7 +6,7 @@ mosaicHDF=function(hdfNames,filename,MRTpath='/home/salute/MRT/bin',bands_subset
             
             mosaicname = file(paste(MRTpath, "/TmpMosaic.prm", sep=""), open="wt")
             write(paste(hdfNames[1], sep=""), mosaicname)
-            for (j in 2:length(hdfNames)) write(paste(getwd(),"/",hdfNames[j], sep=""),mosaicname,append=T)
+            for (j in 2:length(hdfNames)) write(paste(hdfNames[j], sep=""),mosaicname,append=T)
             close(mosaicname)
             # generate mosaic:
             
